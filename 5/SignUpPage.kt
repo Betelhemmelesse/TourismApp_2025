@@ -41,6 +41,16 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.compose.material3.Icon as Icon
 
+/**
+ * Composable function for the Sign Up screen.
+ *
+ * This screen allows users to create a new account by providing their username, email, and password.
+ * It includes a "Remember Me" checkbox and a link to the login screen.
+ *
+ * @param navController The navigation controller used to navigate between screens.
+ * @param viewModel The view model for the sign up screen.  Defaults to a new instance
+ * created via `androidx.lifecycle.viewmodel.compose.viewModel()`.
+ */
 
 @Composable
 fun SignUp(
@@ -167,6 +177,15 @@ fun SignUp(
     }
 }
 
+/**
+ * Composable function for displaying the "Already Signed Up? LogIn" text with a clickable "LogIn" part.
+ *
+ * This composable is used to provide a navigation option for users who already have an
+ * account, allowing them to go directly to the login screen.
+ *
+ * @param controls Callback function to be executed when the "LogIn" text is clicked.  This
+ * function is typically used to trigger navigation to the login screen.
+ */
 @Composable
 fun Signs(controls:()->Unit){
     var newtext= buildAnnotatedString {
